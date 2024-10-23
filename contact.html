@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack on Titan - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('https://w.wallhaven.cc/full/0q/wallhaven-0qmwml.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Header and footer */
+        header.banner {
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            margin-left: 60px;
+        }
+
+        .right-logo-container {
+            margin-right: 60px;
+            flex-shrink: 0;
+        }
+
+        .right-logo-container img {
+            max-width: 150px;
+        }
+
+        nav.nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 3px;
+            font-size: 20px;
+        }
+
+        nav.nav ul li {
+            display: inline-block;
+        }
+
+        nav.nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-weight: 900;
+            padding: 8px 12px;
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav.nav ul li a:hover {
+            background-color: #ff6666;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 8px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        
+        .contact-container {
+            width: 90%;
+            max-width: 900px;
+            margin: 160px auto 0 auto;
+            color: white;
+        }
+
+        .contact-container h1 {
+            font-size: 48px;
+            color: #ffcc00;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .contact-form {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            resize: none;
+            height: 150px;
+        }
+
+        .contact-form button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff6666;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .contact-container {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .contact-form button {
+                font-size: 16px;
+            }
+            footer {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header class="banner">
+        <div class="logo-container">
+            <img src="https://logosmarken.com/wp-content/uploads/2022/02/Attack-on-Titan-Logo.png" alt="aot">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+                <li><a href="art.html">Fan Art</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="right-logo-container">
+            <img src="https://iconape.com/wp-content/png_logo_vector/mappa-logo.png" alt="WIT Studio Logo">
+        </div>
+    </header>
+
+    
+    <section class="contact-container">
+        <h1>Contact Us</h1>
+        <div class="contact-info">
+            <p>Email: <strong>contact@aotfansite.com</strong></p>
+            <p>Follow us on social media:</p>
+            <p>Twitter: <strong>@aotfans</strong></p>
+            <p>Instagram: <strong>@aotfanpage</strong></p>
+        </div>
+
+        <div class="contact-form">
+            <form action="#" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    
+    <footer>
+        &copy; 2024 Attack on Titan Fan Website. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

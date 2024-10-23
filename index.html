@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack on Titan - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        
+        header.banner {
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        /* Left logo */
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            margin-left: 60px;
+        }
+
+        /* Right logo */
+        .right-logo-container {
+            margin-right: 60px;
+            flex-shrink: 0;
+        }
+
+        .right-logo-container img {
+            max-width: 150px;
+        }
+
+        /* menumenu */
+        nav.nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 3px; 
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            font-size: 20px; 
+        }
+
+        nav.nav ul li {
+            display: inline-block;
+        }
+
+        nav.nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-weight: 900;
+            padding: 8px 12px; 
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav.nav ul li a:hover {
+            background-color: #ff6666;
+        }
+
+        /* Full screen imag */
+        .image-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Overlay text */
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            font-style: italic;
+            font-size: 25px;
+            z-index: 5;
+        }
+
+        .overlay-text h2 {
+            font-size: 50px;
+        }
+
+        .overlay-text p {
+            font-size: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 8px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header.banner {
+                flex-direction: column; 
+                align-items: flex-start; 
+                padding: 10px; 
+            }
+
+            .logo-container, .right-logo-container {
+                margin: 0; 
+                align-self: initial;
+            }
+
+            nav.nav ul {
+                flex-direction: column; 
+                align-items: flex-start; 
+                width: 100%; 
+                margin-top: 10px;
+            }
+
+            nav.nav ul li {
+                width: 100%; 
+            }
+
+            nav.nav ul li a {
+                display: block; 
+                width: 100%;
+                padding: 10px; 
+                text-align: center; 
+            }
+
+            
+            .right-logo-container {
+                display: none; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            header.banner {
+                padding: 5px;
+            }
+
+            .logo-container img {
+                max-width: 100px; 
+            }
+
+            nav.nav ul {
+                gap: 3px;
+            }
+
+            nav.nav ul li a {
+                font-size: 12px;
+                padding: 3px 6px;
+            }
+
+            .overlay-text h2 {
+                font-size: 24px;
+            }
+
+            .overlay-text p {
+                font-size: 14px;
+            }
+
+            footer {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <header class="banner">
+        <div class="logo-container">
+            <img src="https://logosmarken.com/wp-content/uploads/2022/02/Attack-on-Titan-Logo.png" alt="aot">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+                <li><a href="art.html">Fan Art</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="right-logo-container">
+            <img src="https://iconape.com/wp-content/png_logo_vector/mappa-logo.png" alt="WIT Studio Logo">
+        </div>
+    </header>
+
+    
+    <section class="content-section">
+        <div class="image-container">
+            <img src="https://w.wallhaven.cc/full/zm/wallhaven-zmv66w.jpg" alt="Titan World Background">
+            
+            <div class="overlay-text">
+                <h2>Welcome to the world of titans</h2>
+                <p>Explore the Epic Story of Humanity's Struggle for Survival</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2024 Attack on Titan Fanpage. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

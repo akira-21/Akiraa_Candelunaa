@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack on Titan - Characters</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        
+        body {
+            background-image: url('https://w.wallhaven.cc/full/0q/wallhaven-0qmwml.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        
+        header.banner {
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Left logo */
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            margin-left: 60px;
+        }
+
+        /* Right logo */
+        .right-logo-container {
+            margin-right: 60px;
+            flex-shrink: 0;
+        }
+
+        .right-logo-container img {
+            max-width: 150px;
+        }
+
+        /* menumennu */
+        nav.nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 3px;
+            white-space: nowrap;
+            font-size: 20px;
+        }
+
+        nav.nav ul li {
+            display: inline-block;
+        }
+
+        nav.nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-weight: 900;
+            padding: 8px 12px;
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav.nav ul li a:hover {
+            background-color: #ff6666;
+        }
+
+        /* Characters */
+        .characters-container {
+            width: 90%;
+            margin: 140px auto 0 auto; /* Margin to push it below the header */
+            padding: 20px;
+            max-width: 1200px;
+            color: white;
+        }
+
+        .characters-container h1 {
+            font-size: 48px;
+            color: #ffcc00;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .character-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .character-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+
+
+        }
+
+        .character-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .character-card h2 {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+
+        .character-card p {
+            font-size: 16px;
+            padding: 0 10px 20px 10px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 8px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header.banner {
+                padding: 5px;
+            }
+
+            .logo-container img, .right-logo-container img {
+                max-width: 120px;
+            }
+
+            nav.nav ul {
+                gap: 5px;
+            }
+
+            nav.nav ul li a {
+                font-size: 14px;
+                padding: 5px 8px;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header.banner {
+                padding: 5px;
+            }
+
+            .logo-container img, .right-logo-container img {
+                max-width: 100px;
+            }
+
+            nav.nav ul {
+                gap: 3px;
+            }
+
+            nav.nav ul li a {
+                font-size: 12px;
+                padding: 3px 6px;
+            }
+
+            footer {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <header class="banner">
+        <div class="logo-container">
+            <img src="https://logosmarken.com/wp-content/uploads/2022/02/Attack-on-Titan-Logo.png" alt="aot">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+                <li><a href="art.html">Fan Art</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="right-logo-container">
+            <img src="https://iconape.com/wp-content/png_logo_vector/mappa-logo.png" alt="WIT Studio Logo">
+        </div>
+    </header>
+
+    
+    <section class="characters-container">
+        <h1>Main Characters</h1>
+        <div class="character-grid">
+        
+            <div class="character-card">
+                <img src="https://i.pinimg.com/enabled_hi/564x/c3/de/39/c3de39ac9fbcff926f6a3ec7d3d91604.jpg" alt="Character Image 1">
+                <h2>Eren Yeager</h2>
+                <p>
+                    Eren Yeager is a determined young man who can transform into a Titan. He fights for humanity's survival but becomes a morally complex figure, willing to take extreme actions for freedom.
+                </p>
+            </div>
+            
+            <div class="character-card">
+                <img src="https://i.pinimg.com/enabled_hi/564x/30/bc/8f/30bc8f955fa998ca7a722e77716f7112.jpg" alt="Character Image 2">
+                <h2>Mikasa Ackerman</h2>
+                <p>
+                    Mikasa Ackerman is Eren Yeager's adoptive sister and a highly skilled soldier. Fiercely loyal and protective, she excels in combat and plays a crucial role in the fight for humanity's survival.
+                </p>
+            </div>
+            
+            <div class="character-card">
+                <img src="https://i.pinimg.com/enabled_hi/564x/a6/98/ce/a698ce8251eb9a57606a306865e1faca.jpg" alt="Character Image 3">
+                <h2>Armin Arlert</h2>
+                <p>
+                    Armin Arlert, a close friend of Eren and Mikasa, is known for his intelligence and strategic thinking. Though physically weaker, his tactical brilliance makes him an invaluable asset in critical situations.
+                </p>
+            </div>
+            
+            <div class="character-card">
+                <img src="https://i.pinimg.com/564x/73/a6/05/73a60557cb7bde0255355449243f161b.jpg" alt="Character Image 4">
+                <h2>Jean Kirstein</h2>
+                <p>
+                    Jean Kirstein is a pragmatic and loyal character who aspires to be a leader. He grows into a skilled fighter and strategist while balancing ambition with teamwork.
+                </p>
+            </div>
+            
+            <div class="character-card">
+                <img src="https://i.pinimg.com/enabled_hi/564x/74/aa/99/74aa99d657733bc115a04739e56c16cd.jpg" alt="Character Image 5">
+                <h2>Levi Ackerman</h2>
+                <p>
+                    Levi Ackerman is a stoic and highly skilled soldier known as humanity's strongest. He is deeply loyal to his team and plays a crucial role in the fight against Titans.
+                </p>
+            </div>
+            
+            <div class="character-card">
+                <img src="https://i.pinimg.com/enabled_hi/564x/1b/8a/ce/1b8aceb52c3b6843c3adb843fe4039e6.jpg" alt="Character Image 6">
+                <h2>Sasha Blouse</h2>
+                <p>
+                    Sasha Blouse is a cheerful soldier known for her love of food and marksmanship. Often called "Potato Girl," she combines lightheartedness with fierce loyalty and bravery in battle.
+                </p>
+            </div>
+            
+            <div class="character-card">
+                <img src="https://i.pinimg.com/564x/74/93/b0/7493b04381a4d10e0a576af028a55771.jpg" alt="Character Image 7">
+                <h2>Connie Springer</h2>
+                <p>
+                    Connie Springer is a friendly soldier known for his loyalty and sense of humor. He provides comic relief while showing bravery and determination in battle, deeply caring for his friends.
+                </p>
+            </div>
+            
+            <div class="character-card">
+                <img src="https://i.pinimg.com/564x/df/1d/a3/df1da37850732d9dd9eaf445bc38a733.jpg" alt="Character Image 8">
+                <h2>Reiner Braun</h2>
+                <p>
+                    Reiner Braun is a strong, complex character torn between his roles as a soldier and Titan shifter. Initially loyal, he grapples with conflicting loyalties and the burdens of his choices.
+                </p>
+            </div>
+            
+            <div class="character-card">
+                <img src="https://i.pinimg.com/564x/86/c1/48/86c1487d53dec1133c899ae67be98dcb.jpg" alt="Character Image 9">
+                <h2>Bertholdt Hoover</h2>
+                <p>
+                    Bertholdt Hoover is a quiet, reserved individual who can transform into the Colossal Titan. He struggles with guilt over his role in devastating attacks, making him a tragic figure.
+                </p>
+            </div>
+            
+            <div class="character-card">
+                <img src="https://i.pinimg.com/564x/1c/3d/cc/1c3dcc6c87374d93d2a41cfd5ac12232.jpg" alt="Character Image 10">
+                <h2>Annie Leonhart</h2>
+                <p>
+                    Annie Leonhart is a skilled, stoic fighter who can transform into the Female Titan. She hides her identity while struggling with her mission and personal feelings.
+                </p>
+            </div>
+             
+             <div class="character-card">
+                <img src="https://i.pinimg.com/enabled_hi/564x/fc/43/68/fc43682eee065b2e3db03d50b924e92f.jpg" alt="Character Image 10">
+                <h2>Ymir Fritz</h2>
+                <p>
+                    Ymir is an independent character with the power to become the Jaw Titan. She seeks freedom and shows loyalty to Historia.
+                </p>
+            </div>
+        
+             <div class="character-card">
+                <img src="https://i.pinimg.com/564x/c5/6d/d6/c56dd6aa10f8e5f82a8f29bb0b371f89.jpg" alt="Character Image 10">
+                <h2>Historia Reiss</h2>
+                <p>
+                    Historia Reiss is the compassionate heir to the royal family. Initially timid, she becomes a strong leader while remaining loyal to Ymir.
+                </p>
+            </div>
+             
+             <div class="character-card">
+                <img src="https://i.pinimg.com/564x/f1/0d/73/f10d73537262333227ffe9885aa47d99.jpg" alt="Character Image 10">
+                <h2>Hange Zoe</h2>
+                <p>
+                    Hange Zoë is an enthusiastic leader in the Survey Corps, known for their curiosity about Titans and a blend of humor and determination to protect their comrades.
+                </p>
+            </div>
+             
+             <div class="character-card">
+                <img src="https://i.pinimg.com/enabled_hi/564x/82/9e/e9/829ee956deb1e0217207f647841effe0.jpg" alt="Character Image 10">
+                <h2>Erwin Smith</h2>
+                <p>
+                    Erwin Smith is the strategic leader of the Survey Corps, known for his charisma, resolve, and willingness to make tough decisions for humanity's survival.
+                </p>
+            </div>
+             
+             <div class="character-card">
+                <img src="https://i.pinimg.com/564x/da/03/d2/da03d2e5ec9ca52935bdb0677fcc63a7.jpg" alt="Character Image 10">
+                <h2>Hannes</h2>
+                <p>
+                    Hannes is a dedicated soldier and childhood friend of Eren and Mikasa, known for his protective nature and courage in the face of danger.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2024 Attack on Titan Fanpage. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

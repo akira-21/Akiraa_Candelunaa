@@ -1,0 +1,97 @@
+/* Image Slider Styles */
+.slider {
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    margin: 50px auto;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 400%; /* 3 images = 300% */
+    height: 100%;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 100%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 50%;
+    height: 100%;
+}
+
+/* menu */
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.manual-btn {
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 10px;
+}
+
+.manual-btn:hover {
+    background: #ffffff;
+}
+
+/* Automatic Navigation */
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: -30px;
+}
+
+.auto-btn1, .auto-btn2, .auto-btn3 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin: 10px;
+    animation: slider 6s infinite;
+}
+
+.auto-btn1 { animation-delay: 0s; }
+.auto-btn2 { animation-delay: 2s; }
+.auto-btn3 { animation-delay: 4s; }
+
+/* Slide Animation */
+@keyframes slider {
+    0% { background: #ffffff; }
+    33.33% { background: #000000; }
+    66.66% { background: #ffffff; }
+    100% { background: #000000; }
+}
+
+/* Image slide logic */
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -100%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -200%;
+}

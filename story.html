@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack on Titan - Story</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+         
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            box-sizing: border-box;
+            scroll-behavior: smooth; 
+        }
+
+        
+        body {
+            background-image: url('https://w.wallhaven.cc/full/0q/wallhaven-0qmwml.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        
+        header.banner {
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            margin-left: 60px;
+        }
+
+        /* Right logo */
+        .right-logo-container {
+            margin-right: 60px;
+            flex-shrink: 0;
+        }
+
+        .right-logo-container img {
+            max-width: 150px;
+        }
+
+        /* menu */
+        nav.nav {
+            flex-grow: 1;
+            text-align: left; 
+        }
+
+        nav.nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 3px;
+            white-space: nowrap;
+            font-size: 15px;
+        }
+
+        nav.nav ul li {
+            display: inline-block;
+        }
+
+        nav.nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-weight: 900;
+            padding: 8px 12px;
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav.nav ul li a:hover {
+            background-color: #ff6666;
+        }
+
+        
+        .image-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    
+        .story-container {
+            width: 90%;
+            margin: 140px auto 0 auto;
+            padding: 20px;
+            max-width: 1200px;
+            color: blue;
+        }
+
+        
+        .story-container h1 {
+            font-size: 48px;
+            color: #ffcc00;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .story-container p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+
+        .slides {
+            display: -webkit-flex;
+            width: 400%;
+            height: 100%;
+            animation: slide 30s infinite;
+        }
+
+        .slides > div {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        
+        @keyframes slide {
+            0% { margin-left: 0; }
+            20% { margin-left: 0; }
+            25% { margin-left: -100%; }
+            45% { margin-left: -100%; }
+            50% { margin-left: -200%; }
+            70% { margin-left: -200%; }
+            75% { margin-left: -300%; }
+            95% { margin-left: -300%; }
+            100% { margin-left: 0%; }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 8px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        
+        @media (max-width: 768px) {
+            header.banner {
+                padding: 5px;
+                justify-content: center; 
+            }
+
+            .logo-container img {
+                margin-left: 0;
+                max-width: 150px;
+            }
+
+            
+            .right-logo-container {
+                display: none;
+            }
+
+            nav.nav ul {
+                gap: 5px;
+            }
+
+            nav.nav ul li a {
+                font-size: 14px;
+                padding: 5px 8px;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header.banner {
+                padding: 5px;
+                justify-content: center;
+            }
+
+            .logo-container img {
+                margin-left: 0;
+                max-width: 120px;
+            }
+
+        
+            .right-logo-container {
+                display: none;
+            }
+
+            nav.nav ul {
+                gap: 3px;
+            }
+
+            nav.nav ul li a {
+                font-size: 12px;
+                padding: 3px 6px;
+            }
+
+            footer {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <header class="banner">
+        <div class="logo-container">
+            <img src="https://logosmarken.com/wp-content/uploads/2022/02/Attack-on-Titan-Logo.png" alt="Attack on Titan Logo">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#story-section">Story</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+                <li><a href="art.html">Fan Art</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="right-logo-container">
+            <img src="https://iconape.com/wp-content/png_logo_vector/mappa-logo.png" alt="MAPPA Studio Logo">
+        </div>
+    </header>
+
+    
+    <section class="story-container" id="story-section">
+        <h1>The Story</h1>
+        <p>
+            Attack on Titan takes place in a world where humanity is on the brink of extinction due to the terrifying Titans—giant humanoid creatures that devour humans. 
+            The last remnants of humanity survive within enormous walls designed to keep the Titans at bay. Follow Eren Yeager and his friends as they uncover the mysteries of the Titans and fight for their survival.
+        </p>
+
+        
+        <div class="slider">
+            <div class="slides">
+                
+                <div>
+                    <img src="https://w.wallhaven.cc/full/5w/wallhaven-5w88x8.png" alt="Titan Attack Scene">
+                    <div class="captions">
+                        <h2>Titan Attack Scene</h2>
+                        <p>The beginning of humanity's struggle.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <img src="https://w.wallhaven.cc/full/wy/wallhaven-wyrr9x.jpg" alt="Survey Corps in Action">
+                    <div class="captions">
+                        <h2>Survey Corps in Action</h2>
+                        <p>The brave soldiers who fight Titans.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <img src="https://w.wallhaven.cc/full/43/wallhaven-43qzr3.jpg" alt="Eren's Transformation">
+                    <div class="captions">
+                        <h2>Eren's Transformation</h2>
+                        <p>Eren discovers his Titan powers.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <img src="https://w.wallhaven.cc/full/l3/wallhaven-l3v9jl.jpg" alt="Battle for Freedom">
+                    <div class="captions">
+                        <h2>Battle for Freedom</h2>
+                        <p>The fate of humanity rests on their shoulders.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2024 Attack on Titan Fanpage. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

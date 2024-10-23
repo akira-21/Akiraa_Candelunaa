@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack on Titan - Fan Art Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('https://w.wallhaven.cc/full/0q/wallhaven-0qmwml.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Header and footer */
+        header.banner {
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            margin-left: 60px;
+        }
+
+        .right-logo-container {
+            margin-right: 60px;
+            flex-shrink: 0;
+        }
+
+        .right-logo-container img {
+            max-width: 150px;
+        }
+
+        nav.nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 3px;
+            font-size: 20px;
+        }
+
+        nav.nav ul li {
+            display: inline-block;
+        }
+
+        nav.nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-weight: 900;
+            padding: 8px 12px;
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav.nav ul li a:hover {
+            background-color: #ff6666;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 8px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Fan Art Gallery Section */
+        .gallery-container {
+            width: 90%;
+            margin: 200px auto 0 auto;
+            max-width: 1200px;
+            color: white;
+        }
+
+        .gallery-container h1 {
+            font-size: 48px;
+            color: #ffcc00;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        
+        body.modal-open {
+            filter: blur(8px);
+            transition: filter 0.3s ease;
+        }
+
+    
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #ffcc00;
+        }
+
+        
+        .modal:target {
+            display: flex;
+        }
+
+        
+        @media (max-width: 768px) {
+            .gallery img {
+                max-width: 100%;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <header class="banner">
+        <div class="logo-container">
+            <img src="https://logosmarken.com/wp-content/uploads/2022/02/Attack-on-Titan-Logo.png" alt="aot">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+                <li><a href="art.html">Fan Art</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="right-logo-container">
+            <img src="https://iconape.com/wp-content/png_logo_vector/mappa-logo.png" alt="WIT Studio Logo">
+        </div>
+    </header>
+
+    <section class="gallery-container">
+        <h1>Fan Art Gallery</h1>
+        <div class="gallery">
+            
+            <a href="#imageModal1"><img src="https://i.pinimg.com/564x/01/ac/e2/01ace2fb7cd9aab8567309ecf22f3c8c.jpg" alt="Fan Art 1"></a>
+            <a href="#imageModal2"><img src="https://i.pinimg.com/564x/1f/7b/0f/1f7b0fb84680c675b7b56e7a29ba957f.jpg" alt="Fan Art 2"></a>
+            <a href="#imageModal3"><img src="https://i.pinimg.com/564x/06/87/83/0687835b5142a70e1adbd28ebb497fe7.jpg" alt="Fan Art 3"></a>
+            <a href="#imageModal4"><img src="https://i.pinimg.com/564x/f2/89/33/f289330cf22803378fa5cfd7d4df9d64.jpg" alt="Fan Art 4"></a>
+            <a href="#imageModal5"><img src="https://i.pinimg.com/564x/4f/b7/da/4fb7daa864c4606df87aff022e49a726.jpg" alt="Fan Art 5"></a>
+            <a href="#imageModal6"><img src="https://i.pinimg.com/736x/e9/ef/a9/e9efa9e79b0ab96e2640a3f0c2336db2.jpg" alt="Fan Art 6"></a>
+            <a href="#imageModal7"><img src="https://i.pinimg.com/736x/ed/32/4e/ed324eaf8655e95c97cdc2f01bbd8403.jpg" alt="Fan Art 7"></a>
+            <a href="#imageModal8"><img src="https://i.pinimg.com/736x/51/5d/e2/515de2356d22056edf0159e46b364aa3.jpg" alt="Fan Art 8"></a>
+        </div>
+    </section>
+
+    
+    <div id="imageModal1" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="https://i.pinimg.com/564x/01/ac/e2/01ace2fb7cd9aab8567309ecf22f3c8c.jpg" alt="Fan Art 1">
+    </div>
+    <div id="imageModal2" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="https://i.pinimg.com/564x/1f/7b/0f/1f7b0fb84680c675b7b56e7a29ba957f.jpg" alt="Fan Art 2">
+    </div>
+    <div id="imageModal3" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="https://i.pinimg.com/564x/06/87/83/0687835b5142a70e1adbd28ebb497fe7.jpg" alt="Fan Art 3">
+    </div>
+    <div id="imageModal4" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="https://i.pinimg.com/564x/f2/89/33/f289330cf22803378fa5cfd7d4df9d64.jpg" alt="Fan Art 4">
+    </div>
+    <div id="imageModal5" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="https://i.pinimg.com/564x/4f/b7/da/4fb7daa864c4606df87aff022e49a726.jpg" alt="Fan Art 5">
+    </div>
+    <div id="imageModal6" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="https://i.pinimg.com/736x/e9/ef/a9/e9efa9e79b0ab96e2640a3f0c2336db2.jpg" alt="Fan Art 6">
+    </div>
+    <div id="imageModal7" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="https://i.pinimg.com/736x/ed/32/4e/ed324eaf8655e95c97cdc2f01bbd8403.jpg" alt="Fan Art 7">
+    </div>
+    <div id="imageModal8" class="modal">
+        <a href="#" class="close">&times;</a>
+        <img src="https://i.pinimg.com/736x/51/5d/e2/515de2356d22056edf0159e46b364aa3.jpg" alt="Fan Art 8">
+    </div>
+
+    <footer>
+        &copy; 2024 Attack on Titan Fan Website. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

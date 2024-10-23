@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack on Titan - Trivia</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ensure html and body take full height */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Background image for the body */
+        body {
+            background-image: url('https://w.wallhaven.cc/full/0q/wallhaven-0qmwml.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* General styles for the header */
+        header.banner {
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Left logo container */
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            margin-left: 60px;
+        }
+
+        /* Right logo container */
+        .right-logo-container {
+            margin-right: 60px;
+            flex-shrink: 0;
+        }
+
+        .right-logo-container img {
+            max-width: 150px;
+        }
+
+        /* Navigation */
+        nav.nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 3px;
+            white-space: nowrap;
+            font-size: 20px;
+        }
+
+        nav.nav ul li {
+            display: inline-block;
+        }
+
+        nav.nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-weight: 900;
+            padding: 8px 12px;
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav.nav ul li a:hover {
+            background-color: #ff6666;
+        }
+
+        /* New Trivia Section - Card Layout */
+        .trivia-container {
+            width: 90%;
+            margin: 200px auto;
+            max-width: 1200px;
+            color: white;
+            text-align: center;
+            font-weight: lighter;
+        }
+
+        .trivia-title {
+            color: #ffcc00;
+            font-size: 48px;
+            margin-bottom: 50px;
+        }
+
+        .trivia-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .trivia-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+            height: 200px; /* Set a fixed height for consistency */
+        }
+
+        .trivia-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the entire card */
+            transition: filter 0.3s; /* Smooth transition for blur */
+        }
+
+        .trivia-card:hover img {
+            filter: blur(5px); /* Blur the image on hover */
+        }
+
+        .trivia-card h2 {
+            font-size: 24px;
+            color: #ffcc00;
+            margin: 0;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .trivia-card p {
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0; /* Hide text initially */
+            transition: opacity 0.3s;
+            position: absolute;
+            bottom: 20px; /* Position text at the bottom of the card */
+            left: 10px;
+            right: 10px;
+            margin: 0; /* Remove margin to avoid overlapping */
+        }
+
+        .trivia-card:hover p {
+            opacity: 1; /* Show text on hover */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 8px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive design for small screens */
+        @media (max-width: 768px) {
+            footer {
+                font-size: 12px;
+            }
+
+            .trivia-card h2 {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            footer {
+                font-size: 10px;
+            }
+
+            .trivia-card h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="banner">
+        <div class="logo-container">
+            <img src="https://logosmarken.com/wp-content/uploads/2022/02/Attack-on-Titan-Logo.png" alt="aot">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+                <li><a href="art.html">Fan Art</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="right-logo-container">
+            <img src="https://iconape.com/wp-content/png_logo_vector/mappa-logo.png" alt="WIT Studio Logo">
+        </div>
+    </header>
+
+    <!-- Trivia Section - Card Layout -->
+    <section class="trivia-container">
+        <h1 class="trivia-title">Attack on Titan Trivia</h1>
+
+        <div class="trivia-cards">
+            <div class="trivia-card">
+                <img src="https://i.pinimg.com/564x/3c/8d/d4/3c8dd4b31bb289d90b161c8a67504ba1.jpg" alt="Trivia 1 Image"> <!-- Replace with actual image link -->
+                <h2>Trivia 1</h2>
+                <p>The design of the Titans was inspired by Hajime Isayama's experience with an inebriated customer at the internet cafe where he worked. The man’s inability to communicate and irrationality inspired the eerie, unpredictable nature of the Titans.</p>
+            </div>
+
+            <div class="trivia-card">
+                <img src="https://i.pinimg.com/enabled_hi/564x/e1/af/6b/e1af6b38d92ce72a23877469d83da299.jpg" alt="Trivia 2 Image"> <!-- Replace with actual image link -->
+                <h2>Trivia 2</h2>
+                <p>Eren's name is derived from the Turkish word "Eren," meaning "saint" or "holy person." Ironically, this contrasts with his often aggressive and chaotic behavior in the series.</p>
+            </div>
+
+            <div class="trivia-card">
+                <img src="https://i.pinimg.com/564x/b9/49/42/b94942512972fa3b158e409d73eb0550.jpg" alt="Trivia 3 Image"> <!-- Replace with actual image link -->
+                <h2>Trivia 3</h2>
+                <p>Levi Ackerman's age was a topic of speculation for years until Hajime Isayama confirmed that he is in his early 30s. Despite this, his youthful appearance and skills make him one of the most feared soldiers.</p>
+            </div>
+
+            <div class="trivia-card">
+                <img src="https://i.pinimg.com/564x/05/2a/95/052a953ec3617ca1d1fa32095b31fb60.jpg" alt="Trivia 4 Image"> <!-- Replace with actual image link -->
+                <h2>Trivia 4</h2>
+                <p>The three walls — Maria, Rose, and Sina — are named after real people in Hajime Isayama’s life. These names are a subtle homage to friends and family members of the creator.</p>
+            </div>
+
+            <div class="trivia-card">
+                <img src="https://i.pinimg.com/564x/ba/38/f0/ba38f0ec9d0b1d1983c7abc0515e2c9e.jpg" alt="Trivia 5 Image"> <!-- Replace with actual image link -->
+                <h2>Trivia 5</h2>
+                <p>Hajime Isayama once considered canceling Attack on Titan due to challenges with the storyline, but he persevered, and the series became a global success.</p>
+            </div>
+
+            <!-- Additional Trivia Cards -->
+            <div class="trivia-card">
+                <img src="https://i.pinimg.com/736x/18/c4/10/18c4103e0b54e8214b9cab3b180940e8.jpg" alt="Trivia 6 Image"> <!-- Replace with actual image link -->
+                <h2>Trivia 6</h2>
+                <p>Attack on Titan was originally serialized in Bessatsu Shōnen Magazine, where it gained a massive following and eventually led to an anime adaptation that premiered in 2013.</p>
+            </div>
+
+            <div class="trivia-card">
+                <img src="https://i.pinimg.com/736x/7f/0b/55/7f0b55ddddaac66efeeaf0ef378c7bbe.jpg" alt="Trivia 7 Image"> <!-- Replace with actual image link -->
+                <h2>Trivia 7</h2>
+                <p>The series explores complex themes like freedom, survival, and the moral implications of war, making it much more than just a story about giant monsters.</p>
+            </div>
+
+            <div class="trivia-card">
+                <img src="https://i.pinimg.com/736x/3d/72/e7/3d72e7a1224ff94692666611fb557a97.jpg" alt="Trivia 8 Image"> <!-- Replace with actual image link -->
+                <h2>Trivia 8</h2>
+                <p>Hajime Isayama, the creator, has stated that he had many ideas for the ending throughout the series, but he only finalized it after much consideration and input from fans.</p>
+            </div>
+
+            <div class="trivia-card">
+                <img src="https://i.pinimg.com/564x/2f/dc/e9/2fdce9ff3829a074f439369dbde629c8.jpg" alt="Trivia 9 Image"> <!-- Replace with actual image link -->
+                <h2>Trivia 9</h2>
+                <p>The ODM gear, used by the characters to fight Titans, was inspired by various real-world technologies, blending creativity with practicality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Attack on Titan &copy; All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

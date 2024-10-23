@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack on Titan - Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('https://w.wallhaven.cc/full/0q/wallhaven-0qmwml.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Header and footer */
+        header.banner {
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            margin-left: 60px;
+        }
+
+        .right-logo-container {
+            margin-right: 60px;
+            flex-shrink: 0;
+        }
+
+        .right-logo-container img {
+            max-width: 150px;
+        }
+
+        nav.nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 3px;
+            font-size: 20px;
+        }
+
+        nav.nav ul li {
+            display: inline-block;
+        }
+
+        nav.nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-weight: 900;
+            padding: 8px 12px;
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav.nav ul li a:hover {
+            background-color: #ff6666;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 8px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        
+        .gallery-container {
+            width: 90%;
+            margin: 160px auto 0 auto;
+            max-width: 1200px;
+            color: white;
+        }
+
+        .gallery-container h1 {
+            font-size: 48px;
+            color: #ffcc00;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        
+        .gallery-masonry {
+            column-count: 3;
+            column-gap: 20px;
+        }
+
+        .gallery-item {
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            break-inside: avoid;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .gallery-masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .gallery-masonry {
+                column-count: 1;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header class="banner">
+        <div class="logo-container">
+            <img src="https://logosmarken.com/wp-content/uploads/2022/02/Attack-on-Titan-Logo.png" alt="aot">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+                <li><a href="art.html">Fan Art</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="right-logo-container">
+            <img src="https://iconape.com/wp-content/png_logo_vector/mappa-logo.png" alt="WIT Studio Logo">
+        </div>
+    </header>
+
+    
+    <section class="gallery-container">
+        <h1>Attack on Titan - World Gallery</h1>
+        <div class="gallery-masonry">
+            
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/564x/06/5b/d3/065bd3129484141ed4feb7e31bfe998e.jpg" alt="Image 1">
+                <div class="gallery-caption">Grieve</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/736x/2e/d4/1d/2ed41d6060d3903a13b0ee40321bceee.jpg" alt="Image 2">
+                <div class="gallery-caption">Shinzou wo Sasageyo</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/564x/15/a3/8c/15a38c7480d84d1f829a53db16773113.jpg" alt="Image 3">
+                <div class="gallery-caption">Levi vs Zeke</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/564x/33/aa/c7/33aac7207dc6fa793b9a8c6d38819fa8.jpg" alt="Image 4">
+                <div class="gallery-caption">Eren and Mikasa</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/564x/62/3f/9e/623f9e7a95001b60b7693826fe8e0eb0.jpg" alt="Image 5">
+                <div class="gallery-caption">The other side of the ocean</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/564x/74/b1/69/74b169332048c8f2b55f22212574be6e.jpg" alt="Image 6">
+                <div class="gallery-caption">The Scouting Legion</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/564x/a8/3a/96/a83a96b1ee5c6a2886ca20fc25f3f7f1.jpg" alt="Image 7">
+                <div class="gallery-caption">Hange's Sacrifice</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/564x/42/48/53/424853e317dba4cd6e9e524f316754d2.jpg" alt="Image 8">
+                <div class="gallery-caption">The Stare</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/564x/56/40/f0/5640f0c2980373f59933e0cca4584381.jpg" alt="Image 9">
+                <div class="gallery-caption">Traitors</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/564x/4b/9c/b3/4b9cb3a1b89d4ac7ad44c1398f3169c1.jpg" alt="Image 10">
+                <div class="gallery-caption">Marley Invasion</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/564x/c1/5a/0c/c15a0c31bd1734c355534abf3c7673bd.jpg" alt="Image 11">
+                <div class="gallery-caption">The Wall Titan</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/564x/95/6f/11/956f11369d7f2debedb23da714f500eb.jpg" alt="Image 12">
+                <div class="gallery-caption">The Rumbling</div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        &copy; 2024 Attack on Titan Fan Website. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

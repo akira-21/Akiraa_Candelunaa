@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack on Titan - Timeline</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        
+        body {
+            background-image: url('https://w.wallhaven.cc/full/0q/wallhaven-0qmwml.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        
+        header.banner {
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Left logo */
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            margin-left: 60px;
+        }
+
+        /* Right logo */
+        .right-logo-container {
+            margin-right: 60px;
+            flex-shrink: 0;
+        }
+
+        .right-logo-container img {
+            max-width: 150px;
+        }
+
+        /* Menu */
+        nav.nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 3px;
+            white-space: nowrap;
+            font-size: 20px;
+        }
+
+        nav.nav ul li {
+            display: inline-block;
+        }
+
+        nav.nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-weight: 900;
+            padding: 8px 12px;
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav.nav ul li a:hover {
+            background-color: #ff6666;
+        }
+
+        /* Timeline */
+        .timeline-container {
+            width: 90%;
+            margin: 200px auto 0 auto; 
+            max-width: 1200px;
+            color: white;
+        }
+
+        .timeline-container h1 {
+            font-size: 48px;
+            color: #ffcc00;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-event {
+            position: relative;
+            margin: 20px 0;
+            padding: 10px;
+            border-left: 4px solid #ffcc00;
+            padding-left: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            display: flex; 
+        }
+
+        .timeline-event img {
+            max-width: 150px; 
+            margin-right: 20px; 
+            border-radius: 5px; 
+        }
+
+        .timeline-event h2 {
+            font-size: 24px;
+            color: #ffcc00;
+        }
+
+        .timeline-event p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+          
+    .timeline-event {
+        position: relative;
+        margin: 20px 0;
+        padding: 10px;
+        border-left: 4px solid #ffcc00;
+        padding-left: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        display: flex; 
+        transition: transform 0.3s ease-in-out; 
+    }
+
+    .timeline-event:hover {
+        transform: scale(1.05); 
+        z-index: 1; 
+    }
+
+    .timeline-event img {
+        max-width: 150px;
+        margin-right: 20px; 
+        border-radius: 5px; 
+        transition: transform 0.3s ease-in-out; 
+    }
+
+    .timeline-event:hover img {
+        transform: scale(1.1); 
+    }
+
+   
+    .timeline-event:hover {
+        border-left-color: #ff6666; 
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 8px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        
+        @media (max-width: 768px) {
+            header.banner {
+                padding: 5px;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+
+            .timeline-event h2 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header.banner {
+                padding: 5px;
+            }
+
+            footer {
+                font-size: 10px;
+            }
+
+            .timeline-event h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header class="banner">
+        <div class="logo-container">
+            <img src="https://logosmarken.com/wp-content/uploads/2022/02/Attack-on-Titan-Logo.png" alt="aot">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+                <li><a href="art.html">Fan Art</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="right-logo-container">
+            <img src="https://iconape.com/wp-content/png_logo_vector/mappa-logo.png" alt="WIT Studio Logo">
+        </div>
+    </header>
+
+   
+    <section class="timeline-container">
+        <h1>Timeline of Events</h1>
+        <div class="timeline">
+            
+            <div class="timeline-event">
+                <img src="https://i.pinimg.com/originals/37/85/3e/37853e7ddcd882c483d326a3c085e31a.gif" alt="Formation of the Survey Corps">
+                <div>
+                    <h2>Year 784 - Formation of the Survey Corps</h2>
+                    <p>The Survey Corps is established with the primary goal of venturing beyond the walls to reclaim territory from the Titans and explore the unknown world outside.</p>
+                </div>
+            </div>
+
+            
+            <div class="timeline-event">
+                <img src="https://i.pinimg.com/originals/67/b5/97/67b5975bea40569df67b53f284a51d22.gif" alt="Fall of Wall Maria">
+                <div>
+                    <h2>Year 845 - The Fall of Wall Maria</h2>
+                    <p>The Colossal Titan breaches Wall Maria, leading to the invasion of Titans in Shiganshina District and triggering the events that change humanity's fate forever.</p>
+                </div>
+            </div>
+
+            
+            <div class="timeline-event">
+                <img src="https://i.pinimg.com/originals/e6/e2/a6/e6e2a6efd0a5cd62e93ce52b7ccab509.gif" alt="Battle of Trost District">
+                <div>
+                    <h2>Year 850 - The Battle of Trost District</h2>
+                    <p>The surviving soldiers, including Eren Yeager, Mikasa Ackerman, and Armin Arlert, engage in a desperate battle to reclaim Trost District from the Titans.</p>
+                </div>
+            </div>
+
+            
+            <div class="timeline-event">
+                <img src="https://i.pinimg.com/originals/49/12/1c/49121c5d03bdb947170c968bed3dfb41.gif" alt="Battle of the Female Titan">
+                <div>
+                    <h2>Year 850 - Battle of the Female Titan</h2>
+                    <p>The Survey Corps encounters the Female Titan during their expedition beyond the walls, leading to a fierce battle that reveals deeper Titan mysteries.</p>
+                </div>
+            </div>
+
+            
+            <div class="timeline-event">
+                <img src="https://i.pinimg.com/originals/03/95/8d/03958d1ebf896f3397883b4bce859353.gif" alt="Return to Shiganshina">
+                <div>
+                    <h2>Year 851 - Return to Shiganshina</h2>
+                    <p>The Survey Corps makes a decisive return to Shiganshina District in an attempt to retake Wall Maria and uncover the secrets hidden in Eren Yeager’s family basement.</p>
+                </div>
+            </div>
+
+            
+            <div class="timeline-event">
+                <img src="https://i.pinimg.com/originals/26/5a/90/265a9072b0b5cc0d206cb6092ec120f4.gif" alt="Marleyan Invasion">
+                <div>
+                    <h2>Year 854 - The Marleyan Invasion</h2>
+                    <p>The Survey Corps embarks on a mission to Marley, leading to a conflict that uncovers secrets about the Titans and the world beyond the walls.</p>
+                </div>
+            </div>
+
+            
+            <div class="timeline-event">
+                <img src="https://i.pinimg.com/originals/4c/e1/dd/4ce1dd1db6ceb814120e512bc1dc91d1.gif" alt="Declaration of War">
+                <div>
+                    <h2>Year 854 - Declaration of War</h2>
+                    <p>Willy Tybur publicly declares war on the Eldians, revealing the history of the Titans and setting off a worldwide conflict that threatens humanity.</p>
+                </div>
+            </div>
+
+            
+            <div class="timeline-event">
+                <img src="https://i.pinimg.com/originals/87/1f/91/871f91e2596991fec3b367e2e3c2e8d1.gif" alt="Eren's Transformation">
+                <div>
+                    <h2>Year 854 - Eren’s Transformation in Marley</h2>
+                    <p>Eren Yeager launches a surprise attack on Marley, revealing his transformation into the Attack Titan and initiating a massive conflict.</p>
+                </div>
+            </div>
+
+            
+            <div class="timeline-event">
+                <img src="https://i.pinimg.com/originals/a0/32/a6/a032a60f605b80448de4873044741051.gif" alt="The Rumbling Begins">
+                <div>
+                    <h2>Year 857 - The Rumbling Begins</h2>
+                    <p>Eren Yeager activates the Rumbling, unleashing the Wall Titans to march across the world, drastically altering the course of history.</p>
+                </div>
+            </div>
+
+            
+            <div class="timeline-event">
+                <img src="https://i.pinimg.com/originals/51/73/4b/51734bc598030e039e4c4e848b7ee483.gif" alt="The Final Stand">
+                <div>
+                    <h2>Year 859 - The Final Stand</h2>
+                    <p>The remaining heroes face off against Eren and the forces of Marley, leading to a final confrontation that determines the fate of both Eldians and the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>Attack on Titan &copy; All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
